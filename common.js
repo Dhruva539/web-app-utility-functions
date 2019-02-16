@@ -14,3 +14,23 @@ export function convertMaxLenChar(value,maxLen,charToAppend) {
 
 }
 
+/** Convert to proper length */
+
+export function convertToProperLen(value,charToBeRemoved) {
+
+   var returnValue=value;
+   var found=true;
+   if(value && charToBeRemoved) {
+   while(found) {
+
+      if(returnValue.charCodeAt(0) === charToBeRemoved) {
+         returnValue= returnValue.substr(1)
+      } else {
+        found =false;
+      }
+   }
+   return returnValue;
+  }
+}
+
+/** this method is used to validate the errors */
